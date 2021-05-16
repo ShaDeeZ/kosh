@@ -1,0 +1,31 @@
+{
+    "manifest_version":2,
+    "name": "Kosh",
+    "description": "Kosh est un surligneur intelligent",
+    "version": "1.0",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>"
+        
+    ],
+    "browser_action": {
+        "default_icon": "img/marker.png",
+        "default_popup": "html/popup.html"
+    },
+
+    "background": {
+        "css":["css/popup.css"],
+        "scripts": ["js/socket.js", "js/popup.js" ],
+        "persistent": false
+      },
+    
+    "icons": {
+        "128": "img/marker.png"
+    },
+    "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css":["css/kush.css"],
+    "js": ["js/socket.js","js/kush.js"]
+  }]
+}

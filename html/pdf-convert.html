@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>  
+    <h1 class="h1">PDF TO HTML</h1>
+    <form method="POST" action="PDF-to-HTML-convertisseur.php">
+        <input type="text" name="link_pdf" id="input_pdf" placeholder="url of .pdf file"/><button type="submit">GO</button>
+    </form>
+        <!-- 
+            1. On rentre une url .pdf dans l'input text
+            2. Quand on click sur GO, le fichier .pdf se convertit en .html
+                un nouveau lien est créer dans un dossier /pdf et une fenetre s'ouvre sur le client avec le fichier en .html
+            3. La tâche est accomplie quand les 2 premières étapes sons finies et qu'il est possible d'intéragir facilement (comme un autre site web)
+                avec le DOM du nouveau fichier (en JavaScript)
+
+        -->
+        <script>
+            window.addEventListener('dblcick',(e)=>{
+                e.preventDefault();
+            })
+        </script>
+</body>
+</html>

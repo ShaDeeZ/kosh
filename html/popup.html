@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/popup.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-row div_intro_settings flex-center green" id="div_url_on">
+        <p class="p_settings">Settings</p>
+        <!--<div id="div_url_on" class="green"></div> -->
+        <img src="../img/support.png" class="img_settings"/>
+    </div>
+    <!--<div class="div_wait flex-center" id="div_wait">
+        <img src="../img/load.gif" class="img_load"/>
+    </div>-->
+    <div id="div_settings" class="contains">
+        <p class="p_settings p_title">Mon activité<img src="../img/information.png" class="img_icon"/> </p>
+        <div id="result_my_activity"></div>
+        <p class="p_settings p_title none">Status<img src="../img/information.png" class="img_icon"/> </p>
+        <div class="statut flex-row none">
+           <div class="div_status input_status" name="status" data-status="1"> All  </div>
+           <div class="div_status input_status" name="status" data-status="2"> Etudiant  </div>
+            <div class="div_status input_status" name="status" data-status="3">  Professionnel </div>
+        </div>
+        <div class="groupes">
+            <div class="flex-row">
+                <p class="p_settings p_title"> Mes Groupes<img src="../img/information.png" class="img_icon"/> </p><p class="flex-row p_img_gr"> <img src="../img/add.png" class="img_icon" id="icon_add_gr"/> <img src="../img/link.png"  id="icon_join_gr" class="img_icon"/><img src="../img/search_gr.png" class="img_icon" id="icon_search_gr"/></p>
+            </div>
+            <div class="flex-row">
+                <div class="hr_gr tr_delete"></div>
+                <div class="hr_gr">N°</div>
+                <div class="hr_gr">Nom</div>
+                <div class="hr_gr tr_description">Description</div>
+                <div class="hr_gr tr_dossier">Dossier</div>
+                <div class="hr_gr">Activer</div>
+            </div>
+            <div id="rep_groupe"></div>
+            <div id="div_search_gr" class="div_grps none">
+                <p class="p_settings p_title">Search group</p>
+                <div class="flex-row margin-1">
+                    <input type="text" id="search_gr" placeholder="Recherche.."/>
+                    <div id="btn_search_gr">Search</div>
+                </div>
+                <div id="div_result_search_gr"></div>
+                
+            </div>
+
+            <div class="div_add_dossier">
+                <h3> Ajouter un dossier au groupe actif</h3>
+                <input type id="input_new_dossier"/> <div class="btn_new_dossier btn_copy" id="btn_new_dossier">Add</div>
+            </div>
+
+            <div id="div_add_gr" class="div_grps none">
+                <p class="p_settings p_title">Add group</p>
+                <div class="flex-col div_add_gr">
+                    <div class="nom_gr"><input type="text" id="input_nom_gr" placeholder="name"/></div>
+                    <p class="p_title_gr"> Description </p>
+                    <div class="description_gr"><textarea id="input_description_gr"></textarea></div>
+                    <div class="flex-row">
+                        <div>
+                            <div class="div_q_add_gr"> <p class="p_add_gr">Indexé par les moteurs de recherches ? <span class="span_input span_input_public status_selected" data-value="1">OUI</span> - <span class="span_input span_input_public" data-value="0">NON</span></p></div>
+                            <div class="div_q_add_gr"> <p class="p_add_gr">Les autres membres peuvent participer ? <span class="span_input span_input_mono status_selected" data-value="0" >OUI</span> - <span class="span_input span_input_mono" data-value="0">NON</span></p></div>
+                        </div>
+                        <div><div class="btn_gr" id="btn_add_gr"> Add </div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="div_join_gr" class="div_grps none">
+                <p class="p_settings p_title">Join group</p>
+                <div class="flex-row div_join_gr"><input class="input_join_gr" id="input_join_gr"/><div class="btn_gr" id="btn_join_gr"> Join </div> </div>
+            </div>
+            </div>
+        <p class="p_settings p_title">Copy from website<img src="../img/information.png" class="img_icon"/> </p>
+
+        <div id="div_copy" class="flex-row">
+            <div class="btn_copy" id="btn_copy_mine"> Copy your kosh </div>
+            <div class="btn_copy" id="btn_copy_gr"> Copy group's kosh </div>
+            <!-- <div class="btn_copy" id="btn_copy_all"> Copy all </div> -->
+        </div>
+        <div id="div_rep_to_copy"></div>
+        <p class="p_settings p_title"> KOSH ON PDF<img src="../img/information.png" class="img_icon"/> </p>
+            <input type="submit" class="btn_add_gr" id="btn_convert" value="Rendre le pdf koshable">
+            <button id="btn_convert_fichier" type="submit">Charger un fichier PDF</button>
+   
+
+    </div>
+    <div class="contains">
+        <p class="p_settings p_title">Search<img src="../img/information.png" class="img_icon"/> </p>
+        <div class="flex-col margin-1">
+            <input type="text" id="search" class="input_search_g" placeholder="Recherche.."/>
+            <div  class="flex-row">
+                <div class="btn_copy btn_status_search status_selected" id="btn_search_mine" > Mine </div>
+                <div class="btn_copy btn_status_search" id="btn_search_grp"> Group </div>
+                <div class="btn_copy btn_status_search" id="btn_search"> All </div>
+            </div>
+        
+        </div>
+        
+        <div id="result_search" class="flex-col"></div>
+
+
+
+    </div>
+    <script type="text/javascript" src="../js/socket.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+</body>
+
+</html>
+
+
